@@ -6,8 +6,8 @@ const Footer = () => {
     <div className="bg-primary">
       <div className="flex justify-center text-secondary mt-12">
         <div className="text-2xl lg:w-3/5 justify-center my-8 m-4">
-          Software undergoes beta testing shortly before its's realeased.ꞵ is
-          Latin for "still doesn't work!"
+          Software undergoes beta testing shortly before its{"\'"}s realeased.ꞵ is
+          Latin for {`\"still doesn\'t work!\"`}
         </div>
       </div>
       <div className="flex justify-center ">
