@@ -20,7 +20,7 @@ const NavBar = () => {
       { title: "Projects", Url: "#Projects" },
       { title: "Contact me", Url: "#ContactMe" },
     ],
-    EndLink: { title: "Resume", Url: "/" },
+    EndLink: { title: "Resume", Url: "/Aditya Mehrotra(24-01-2024).pdf" },
   };
   const [isOpen, setIsOpen] = useState(false);
   const handleOpensheet = () => {
@@ -59,7 +59,8 @@ const NavBar = () => {
                 variant="destructive"
                 className="bg-reddish transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-150 text-primary hover:text-secondary hover:bg-reddish "
               >
-                {NavBarItems.EndLink?.title}
+                <Link href={NavBarItems.EndLink?.Url} target="_blank">{NavBarItems.EndLink?.title}</Link>
+                
               </Button>
             </NavigationMenuItem>
           </NavigationMenuList>

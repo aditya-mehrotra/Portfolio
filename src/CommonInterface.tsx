@@ -6,7 +6,7 @@ export interface LINK_INTERFACE{
 export interface NAVBAR_ITEMS{
     Brand: LINK_INTERFACE;
     Items?: LINK_INTERFACE[];
-    EndLink?: LINK_INTERFACE;
+    EndLink: LINK_INTERFACE;
 }
 export interface EXPERIENCE_INTERFACE{
     Company: string;
