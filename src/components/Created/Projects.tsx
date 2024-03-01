@@ -16,8 +16,22 @@ import { Separator } from "../ui/separator";
 const Projects = () => {
   const Projects: PROJECT_INTERFACE[] = [
     {
+      Title: "Classification of Deepfakes using CNN",
+      Url: "https://github.com/aditya-mehrotra/Deepfake_Detection_Images",
+      Track: "Machine Learning",
+      Summary:
+        "Developed a Convolution neural network to classify AI generated and real faces which were sourced from a GAN created by NVIDIA.",
+      TechStack: [
+        "Tensorflow",
+        "Keras",
+        "Pandas",
+        "Numpy",
+        "MathPlotLib"
+      ],
+    },
+    {
       Title: "Dank Football Website",
-      Url: "",
+      Url: "https://github.com/aditya-mehrotra/DankFootball",
       Track: "Full stack development",
       Summary:
         "Collaborated on a Full stack website. In the site we developed a working user login and profile system.",
@@ -32,15 +46,15 @@ const Projects = () => {
     },
     {
       Title: "KNN Classification Model",
-      Url: "",
+      Url: "https://github.com/aditya-mehrotra/Machine-Learning/tree/main/Mandatory%20Task",
       Track: "Machine Learning",
       Summary:
-        "Developed a model which used Knn classification to predict the whether a child is a senior or a junior according to theshoes size and height.",
+        "Developed a model which used Knn classification to predict the whether a child is a senior or a junior according to the shoes size and height.",
       TechStack: ["sklearn", "numpy", "pandas"],
     },
     {
       Title: "Theobroma Website",
-      Url: "",
+      Url: "https://github.com/aditya-mehrotra/theobroma_project",
       Track: "Full stack development",
       Summary: "Developed a clone of the Frontend of an e-commerce site.",
       TechStack: ["HTML", "CSS", "Bootstap"],
@@ -54,9 +68,9 @@ const Projects = () => {
       <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1  gap-4 m-4">
         {Projects?.map((Project, index) => {
           return (
-            <Link key={index} href={Project.Url}>
-              <div  className="h-max">
-                <Card className="">
+            <div className="" key={index}>
+              <Link  href={Project.Url} className="">
+                <Card className="h-full">
                   <CardHeader>
                     <CardTitle>{Project.Title}</CardTitle>
                     <CardDescription className="text-reddish">
@@ -70,7 +84,8 @@ const Projects = () => {
                     {Project?.TechStack?.map((Stack, idx) => {
                       return (
                         <Badge
-                          className="m-1 text-reddish bg-secondary"
+                          variant={"outline"}
+                          className="m-1 text-reddish bg-primary"
                           key={idx}
                         >
                           {Stack}
@@ -79,8 +94,8 @@ const Projects = () => {
                     })}
                   </CardFooter>
                 </Card>
-              </div>
-            </Link>
+              </Link>
+            </div>
           );
         })}
       </div>

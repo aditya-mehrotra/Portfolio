@@ -47,7 +47,7 @@ const Experience = () => {
                   {Experience?.TechStack?.map((Stack, idx) => {
                     return (
                       <Badge
-                        className="m-1 text-reddish bg-secondary"
+                        className="m-1 text-reddish bg-primary"
                         key={idx}
                       >
                         {Stack}
@@ -57,7 +57,7 @@ const Experience = () => {
                   {Experience?.Languages?.map((Language, idx) => {
                     return (
                       <Badge
-                        className="m-1 text-reddish bg-secondary"
+                        className="m-1 text-reddish bg-primary"
                         key={idx}
                       >
                         {Language}

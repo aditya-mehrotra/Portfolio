@@ -53,10 +53,10 @@ const ContactMe = () => {
         <div className="text-4xl">Contact Me</div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 bg-accent">
-        <div className="m-12">
+        <div className="m-6 lg:m-12">
           <div className="text-4xl">Get in touch!</div>
           <div className="text-reddish">Fill the form to get in touch!</div>
-          <div className="mt-44">
+          <div className="mt-4 lg:mt-44">
             <Link
               href="https://www.linkedin.com/in/thisisaditya-mehrotra/"
               className="flex w-fit m-1 bg-"
@@ -67,7 +67,7 @@ const ContactMe = () => {
                 role="img"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                color="#000"
+                color="#FFFFFF"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <title>LinkedIn icon</title>
@@ -84,7 +84,7 @@ const ContactMe = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                color="#000"
+                color="#FFFFFF"
               >
                 <path d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
@@ -101,7 +101,7 @@ const ContactMe = () => {
                 role="img"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                color="#000"
+                color="#FFFFFF"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <title>GitHub icon</title>
@@ -112,9 +112,9 @@ const ContactMe = () => {
           </div>
         </div>
 
-        <div className="m-12">
+        <div className="m-6 lg:m-12">
           <Card>
-            <CardContent className="m-6">
+            <CardContent className="">
               <div className="my-4">
                 <span className="m-1">Email</span>
                 <Input type="email" placeholder="john@gmail.com" id="Email" value={Email} onChange={(e)=>{
@@ -133,7 +133,7 @@ const ContactMe = () => {
                   setMessage(e.target.value);
                 }}/>
               </div>
-              <Button variant="outline" className="bg-reddish transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-150 text-primary hover:text-secondary hover:bg-reddish" onClick={handleSubmitForm}> Submit</Button>
+              <Button variant="outline" className="bg-reddish transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-150 text-primary hover:text-secondary hover:bg-reddish" onClick={handleSubmitForm}> Contact me</Button>
             </CardContent>
           </Card>
         </div>
