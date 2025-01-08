@@ -15,6 +15,15 @@ import { Separator } from "../ui/separator";
 const Experience = () => {
   const Experiences: EXPERIENCE_INTERFACE[] = [
     {
+      Company: "Adani Digital Labs",
+      Position: "Frontend Developer",
+      Summary:
+        "As an Executive Frontend Developer at Adani Digital Labs, I focus on enhancing web performance and user experience. I optimize Core Web Vitals to improve search rankings, conduct performance audits using tools like Lighthouse and GTmetrix, and implement Next.js server-side rendering for better site visibility. Additionally, I develop sitemaps to enhance navigation and refactor codebases with SonarQube to ensure high-quality, efficient code.",
+      TechStack: ["Next.js", "React.js", "Jquery", "EJS",'Google Lighthouse',"Page Insights"],
+      Languages: ["React", "JavaScript", "Css"],
+      Duration: "June 2024-Current",
+    },
+    {
       Company: "JSW One Platforms",
       Position: "Software Development Intern",
       Summary:
