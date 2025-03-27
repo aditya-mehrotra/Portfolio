@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Aditya Mehrotra",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="select-none">
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
