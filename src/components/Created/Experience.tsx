@@ -19,7 +19,14 @@ const Experience = () => {
       Position: "Frontend Developer",
       Summary:
         "As an Executive Frontend Developer at Adani Digital Labs, I focus on enhancing web performance and user experience. I optimize Core Web Vitals to improve search rankings, conduct performance audits using tools like Lighthouse and GTmetrix, and implement Next.js server-side rendering for better site visibility. Additionally, I develop sitemaps to enhance navigation and refactor codebases with SonarQube to ensure high-quality, efficient code.",
-      TechStack: ["Next.js", "React.js", "Jquery", "EJS",'Google Lighthouse',"Page Insights"],
+      TechStack: [
+        "Next.js",
+        "React.js",
+        "Jquery",
+        "EJS",
+        "Google Lighthouse",
+        "Page Insights",
+      ],
       Languages: ["React", "JavaScript", "Css"],
       Duration: "June 2024-Current",
     },
@@ -41,7 +48,7 @@ const Experience = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 m-4">
         {Experiences?.map((Experience, index) => {
           return (
-                <div key={index} className="col-span-full">
+            <div key={index} className="col-span-full">
               <Card>
                 <CardHeader>
                   <CardTitle>{Experience.Company}</CardTitle>
@@ -55,10 +62,7 @@ const Experience = () => {
                 <CardFooter className="flex-wrap">
                   {Experience?.TechStack?.map((Stack, idx) => {
                     return (
-                      <Badge
-                        className="m-1 text-reddish bg-primary"
-                        key={idx}
-                      >
+                      <Badge className="m-1 text-reddish"  variant={"outline"} key={idx}>
                         {Stack}
                       </Badge>
                     );
@@ -66,7 +70,8 @@ const Experience = () => {
                   {Experience?.Languages?.map((Language, idx) => {
                     return (
                       <Badge
-                        className="m-1 text-reddish bg-primary"
+                        variant={"outline"}
+                        className="m-1 text-reddish"
                         key={idx}
                       >
                         {Language}
@@ -79,9 +84,7 @@ const Experience = () => {
           );
         })}
       </div>
-      <div className="flex mt-12"><Separator className="bg-reddish" /></div>
     </div>
-    
   );
 };
 

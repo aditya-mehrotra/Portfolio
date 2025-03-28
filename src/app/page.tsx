@@ -11,13 +11,15 @@ import Footer from "@/components/Created/Footer";
 export default function Home() {
   return (
     <>
+      <div className="lg:container">
         <NavBar />
         <AboutMe />
         <Experience />
         <Projects />
         <Skills />
         <ContactMe />
-        <Footer />
+      </div>
+      <Footer />
     </>
   );
 }

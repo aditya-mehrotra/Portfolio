@@ -24,12 +24,12 @@ const Skills = () => {
   ];
 
   return (
-    <div className="m-4 lg:mx-20 xl:mx-48" id="Skills">
+    <div className="m-4 mt-32 lg:mx-20 xl:mx-48" id="Skills">
       <div className="flex justify-center m-12">
         <div className="text-4xl">Skills</div>
       </div>
       <div className="flex justify-center">
-        <div className="flex flex-wrap  lg:w-3/5 justify-center gap-4">
+        <div className="flex flex-wrap  lg:w-3/5 justify-center gap-2">
           {skills.map((skill, index) => {
             return (
               <Button className="bg-reddish pointer-events-none text-primary" key={index}>
@@ -38,9 +38,6 @@ const Skills = () => {
             );
           })}
         </div>
-      </div>
-      <div className="flex mt-12 mb-12">
-        <Separator className="bg-reddish" />
       </div>
     </div>
   );

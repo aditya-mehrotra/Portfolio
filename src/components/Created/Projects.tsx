@@ -52,16 +52,16 @@ const Projects = () => {
         "Developed a model which used Knn classification to predict the whether a child is a senior or a junior according to the shoes size and height.",
       TechStack: ["sklearn", "numpy", "pandas"],
     },
-    {
-      Title: "Theobroma Website",
-      Url: "https://github.com/aditya-mehrotra/theobroma_project",
-      Track: "Full stack development",
-      Summary: "Developed a clone of the Frontend of an e-commerce site.",
-      TechStack: ["HTML", "CSS", "Bootstap"],
-    },
+    // {
+    //   Title: "Theobroma Website",
+    //   Url: "https://github.com/aditya-mehrotra/theobroma_project",
+    //   Track: "Full stack development",
+    //   Summary: "Developed a clone of the Frontend of an e-commerce site.",
+    //   TechStack: ["HTML", "CSS", "Bootstap"],
+    // },
   ];
   return (
-    <div className="m-4 lg:mx-20 xl:mx-48" id="Projects">
+    <div className="m-4 mt-32 lg:mx-20 xl:mx-48" id="Projects">
       <div className="flex justify-center m-12">
         <div className="text-4xl">Projects</div>
       </div>
@@ -70,7 +70,7 @@ const Projects = () => {
           return (
             <div className="" key={index}>
               <Link  href={Project.Url} className="">
-                <Card className="h-full">
+                <Card className="h-full flex flex-wrap justify-between">
                   <CardHeader>
                     <CardTitle>{Project.Title}</CardTitle>
                     <CardDescription className="text-reddish">
@@ -85,7 +85,7 @@ const Projects = () => {
                       return (
                         <Badge
                           variant={"outline"}
-                          className="m-1 text-reddish bg-primary"
+                          className="m-[2px] text-reddish"
                           key={idx}
                         >
                           {Stack}
@@ -98,9 +98,6 @@ const Projects = () => {
             </div>
           );
         })}
-      </div>
-      <div className="flex mt-12">
-        <Separator className="bg-reddish" />
       </div>
     </div>
   );
