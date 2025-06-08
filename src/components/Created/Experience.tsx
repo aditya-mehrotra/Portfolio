@@ -18,7 +18,7 @@ const Experience = () => {
       Company: "Adani Digital Labs",
       Position: "Frontend Developer",
       Summary:
-        "As an Executive Frontend Developer at Adani Digital Labs, I focus on enhancing web performance and user experience. I optimize Core Web Vitals to improve search rankings, conduct performance audits using tools like Lighthouse and GTmetrix, and implement Next.js server-side rendering for better site visibility. Additionally, I develop sitemaps to enhance navigation and refactor codebases with SonarQube to ensure high-quality, efficient code.",
+        "Frontend Developer at Adani Digital Labs, focused on performance, SEO, and user experience for adanione.com. Improved homepage speed by 12% via Core Web Vitals, built scalable SSR solutions with Next.js, and launched TripSure, boosting booking revenue by 10%. Developed a MongoDB-powered SSR logic engine for SEO page control and delivered tested UI components, reducing regression by 40%.",
       TechStack: [
         "Next.js",
         "React.js",
@@ -34,7 +34,7 @@ const Experience = () => {
       Company: "JSW One Platforms",
       Position: "Software Development Intern",
       Summary:
-        "During my internship, I actively contributed to the Master Data Admin project as a Software Engineer. I focused on enhancing the admin panel, particularly the Material Master module, which serves as the hub for data management. My responsibilities included integrating API, improving listing functionalities for categories, products, and variants, and implementing pre-commit hooks to ensure code quality.",
+        "Delivered a scalable admin dashboard using Next.js and Material UI, streamlining metadata management across 3+ product verticals. Accelerated API response handling by 25% with optimized data fetching and lazy rendering. Standardized code quality with pre-commit Husky hooks and ESLint integration, lowering CI errors.",
       TechStack: ["Next.js", "Nuxt.js", "Vue.js", "Husky"],
       Languages: ["React", "JavaScript", "Css"],
       Duration: "May-July 2023",
@@ -62,7 +62,11 @@ const Experience = () => {
                 <CardFooter className="flex-wrap">
                   {Experience?.TechStack?.map((Stack, idx) => {
                     return (
-                      <Badge className="m-1 text-reddish"  variant={"outline"} key={idx}>
+                      <Badge
+                        className="m-1 text-reddish"
+                        variant={"outline"}
+                        key={idx}
+                      >
                         {Stack}
                       </Badge>
                     );
