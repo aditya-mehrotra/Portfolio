@@ -12,7 +12,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "../ui/button";
 
-
 const ContactMe = () => {
   interface ContactMeInterface {
     email: string;
@@ -25,17 +24,17 @@ const ContactMe = () => {
   const handleSubmitForm = async (): Promise<void> => {
     const ContactMeData: ContactMeInterface = {
       email: Email,
-      name: Name, 
+      name: Name,
       message: Message,
-    }
+    };
     console.log(ContactMeData);
-    const res = await fetch('',{
-      method: 'POST',
+    const res = await fetch("/api/contact-us", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(ContactMeData)
-    },);
+      body: JSON.stringify(ContactMeData),
+    });
     if (!res.ok) {
       const errorText = await res.text();
       console.log(`Error: ${errorText}`);
@@ -45,7 +44,6 @@ const ContactMe = () => {
       setName("");
     }
   };
-
 
   return (
     <div className="m-4 lg:mx-20 xl:mx-48" id="ContactMe">
@@ -77,7 +75,10 @@ const ContactMe = () => {
                 linkedin.com/in/thisisaditya-mehrotra
               </span>
             </Link>
-            <Link href="mailto:adityamehrotra6@gmail.com" className="flex w-fit m-1">
+            <Link
+              href="mailto:adityamehrotra6@gmail.com"
+              className="flex w-fit m-1"
+            >
               <svg
                 width="24"
                 height="24"
@@ -117,23 +118,47 @@ const ContactMe = () => {
             <CardContent className="">
               <div className="my-4">
                 <span className="m-1">Email</span>
-                <Input type="email" placeholder="john@gmail.com" id="Email" value={Email} onChange={(e)=>{
-                  setEmail(e.target.value);
-                }}/>
+                <Input
+                  type="email"
+                  placeholder="john@gmail.com"
+                  id="Email"
+                  value={Email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
               </div>
               <div className="my-4">
                 <span className="m-1">Name</span>
-                <Input type="text" placeholder="John Doe" id="Name" value={Name} onChange={(e)=>{
-                  setName(e.target.value);
-                }}/>
+                <Input
+                  type="text"
+                  placeholder="John Doe"
+                  id="Name"
+                  value={Name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                />
               </div>
               <div className="my-4">
                 <span className="m-1">Message</span>
-                <Textarea placeholder="Type your message here." id="Message" value={Message} onChange={(e)=>{
-                  setMessage(e.target.value);
-                }}/>
+                <Textarea
+                  placeholder="Type your message here."
+                  id="Message"
+                  value={Message}
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                />
               </div>
-              <Button variant="outline" className="bg-reddish transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-150 text-primary hover:text-secondary hover:bg-reddish" onClick={handleSubmitForm}> Contact me</Button>
+              <Button
+                variant="outline"
+                className="bg-reddish transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-150 text-primary hover:text-secondary hover:bg-reddish"
+                onClick={handleSubmitForm}
+              >
+                {" "}
+                Contact me
+              </Button>
             </CardContent>
           </Card>
         </div>
