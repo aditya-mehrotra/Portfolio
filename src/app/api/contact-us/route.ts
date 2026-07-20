@@ -85,7 +85,6 @@ export async function POST(request: Request) {
       `,
     });
 
-    console.log("🚀 ~ POST ~ res:", res)
 
     return NextResponse.json({ success: true });
   } catch (error: unknown) {
