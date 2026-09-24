@@ -20,7 +20,7 @@ const NavBar = () => {
       { title: "Projects", Url: "#Projects" },
       { title: "Contact me", Url: "#ContactMe" },
     ],
-    EndLink: { title: "Resume", Url: "/Aditya Mehrotra.pdf" },
+    EndLink: { title: "Resume", Url: "/aditya_mehrotra.pdf" },
   };
   const [isOpen, setIsOpen] = useState(false);
   const handleOpensheet = () => {
