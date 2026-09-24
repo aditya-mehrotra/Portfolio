@@ -21,13 +21,7 @@ const Projects = () => {
       Track: "Machine Learning",
       Summary:
         "Developed a Convolution neural network to classify AI generated and real faces which were sourced from a GAN created by NVIDIA.",
-      TechStack: [
-        "Tensorflow",
-        "Keras",
-        "Pandas",
-        "Numpy",
-        "MathPlotLib"
-      ],
+      TechStack: ["Tensorflow", "Keras", "Pandas", "Numpy", "MathPlotLib"],
     },
     {
       Title: "Dank Football Website",
@@ -68,8 +62,17 @@ const Projects = () => {
       <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1  gap-4 m-4">
         {Projects?.map((Project, index) => {
           return (
-            <div className="" key={index}>
-              <Link  href={Project.Url} className="">
+            <div
+              className=""
+              key={index}
+              onClick={() => {
+                sendEvent({
+                  event: "project_clicked",
+                  category: Project.Title,
+                });
+              }}
+            >
+              <Link href={Project.Url} className="">
                 <Card className="h-full flex flex-wrap justify-between">
                   <CardHeader>
                     <CardTitle>{Project.Title}</CardTitle>

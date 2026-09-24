@@ -40,7 +40,15 @@ const NavBar = () => {
           <NavigationMenuList className="flex grid grid-cols-5 gap-4">
             {NavBarItems.Items?.map((Item, index) => {
               return (
-                <div key={index}>
+                <div
+                  key={index}
+                  onClick={() => {
+                    sendEvent({
+                      event: "navbar_item_clicked",
+                      category: Item.title,
+                    });
+                  }}
+                >
                   <NavigationMenuItem className="hover:text-reddish">
                     <Link href={Item.Url} legacyBehavior passHref>
                       <NavigationMenuLink>

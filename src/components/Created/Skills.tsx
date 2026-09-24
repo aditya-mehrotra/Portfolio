@@ -32,7 +32,13 @@ const Skills = () => {
         <div className="flex flex-wrap  lg:w-3/5 justify-center gap-2">
           {skills.map((skill, index) => {
             return (
-              <Button className="bg-reddish pointer-events-none text-primary" key={index}>
+              <Button
+                className="bg-reddish pointer-events-none text-primary"
+                key={index}
+                onClick={() => {
+                  sendEvent({ event: "skill_clicked", category: skill });
+                }}
+              >
                 {skill}
               </Button>
             );

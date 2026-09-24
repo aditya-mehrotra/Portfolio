@@ -17,6 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="select-none">
+        {/* eslint-disable-next-line @next/next/next-script-for-ga */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-PKKZP4RVQ5"
+        ></script>
         <Analytics />
         <SpeedInsights />
         <ThemeProvider
